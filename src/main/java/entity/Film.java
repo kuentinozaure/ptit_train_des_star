@@ -1,6 +1,8 @@
 package entity;
 
-public class Film implements Media {
+import java.io.Serializable;
+
+public class Film implements Media, Serializable  {
 
 	private String anneeTournage;
 	private String debutTournage;

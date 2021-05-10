@@ -23,7 +23,16 @@ import entity.WebSerie;
 
 public class BatchUtil {
 
+	private static BatchUtil instance;
+
 	public BatchUtil() {
+	}
+
+	public static BatchUtil getInstance() {
+		if (instance == null) {
+			instance = new BatchUtil();
+		}
+		return instance;
 	}
 
 	/**
@@ -34,8 +43,9 @@ public class BatchUtil {
 	 * @throws InterruptedException
 	 * @throws ParseException
 	 */
-	public List<Media> getAllFilmInParis(LoggerUtil logger) throws IOException, InterruptedException, ParseException {
+	public List<Media> getAllFilmInParis() throws IOException, InterruptedException, ParseException {
 
+		LoggerUtil logger = LoggerUtil.getInstance();
 		logger.WriteInfoLogInFile("Get all film in Paris at " + LocalDateTime.now());
 		List<Media> mediaList = new ArrayList<Media>();
 
@@ -68,17 +78,19 @@ public class BatchUtil {
 
 				filmAlreadyNote.add(nomTournage);
 				mediaList.add(new Film(anneeTournage, debutTournage, finTournage, typeTournage, adresseTournage,
-						nomTournage, nomProducteur, coordx, coordy, getFilmByName(nomTournage, logger)));
+						nomTournage, nomProducteur, coordx, coordy, getFilmByName(nomTournage)));
 
 				logger.WriteInfoLogInFile("Add Long métrage at " + LocalDateTime.now());
 
 			} else if (typeTournage.equals("Série TV")) {
+
 				mediaList.add(new SerieTv(anneeTournage, debutTournage, finTournage, typeTournage, adresseTournage,
 						nomTournage, nomProducteur, coordx, coordy));
 
 				logger.WriteInfoLogInFile("Add Série TV " + nomTournage + " at " + LocalDateTime.now());
 
 			} else if (typeTournage.equals("Série Web")) {
+
 				mediaList.add(new WebSerie(anneeTournage, debutTournage, finTournage, typeTournage, adresseTournage,
 						nomTournage, nomProducteur, coordx, coordy));
 
@@ -89,11 +101,11 @@ public class BatchUtil {
 		}
 
 		return mediaList;
-
 	}
 
-	public String getFilmByName(String filmName, LoggerUtil logger)
-			throws IOException, InterruptedException, ParseException {
+	public String getFilmByName(String filmName) throws IOException, InterruptedException, ParseException {
+
+		LoggerUtil logger = LoggerUtil.getInstance();
 
 		logger.WriteInfoLogInFile("Get Film notation by " + filmName + " note at " + LocalDateTime.now());
 

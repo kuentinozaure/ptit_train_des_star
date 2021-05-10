@@ -1,6 +1,8 @@
 package entity;
 
-public class WebSerie implements Media {
+import java.io.Serializable;
+
+public class WebSerie implements Media, Serializable {
 
 	private String anneeTournage;
 	private String debutTournage;

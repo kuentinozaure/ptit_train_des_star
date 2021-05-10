@@ -1,7 +1,11 @@
 package entity;
 
-public class SerieTv implements Media {
+import java.io.Serializable;
 
+public class SerieTv implements Media, Serializable {
+
+	private static final long serialVersionUID = 1L;
+	
 	private String anneeTournage;
 	private String debutTournage;
 	private String finTournage;
