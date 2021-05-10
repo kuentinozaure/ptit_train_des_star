@@ -7,6 +7,7 @@ import entity.Media;
 import util.BatchUtil;
 import util.LoggerUtil;
 import util.SerializableUtil;
+import util.SparqlUtil;
 
 public class DataCollectBatch {
 
@@ -14,6 +15,7 @@ public class DataCollectBatch {
 		LoggerUtil logger = LoggerUtil.getInstance();
 		BatchUtil util = BatchUtil.getInstance();
 		SerializableUtil utilSerializable = SerializableUtil.getInstance();
+		SparqlUtil sparqlUtil = SparqlUtil.getInstance();
 		ArrayList<Media> medias = utilSerializable.ReadObjectToFile();
 
 		logger.WriteInfoLogInFile("---------- Start Import" + LocalDateTime.now() + "---------- ");
@@ -26,7 +28,10 @@ public class DataCollectBatch {
 
 		} else {
 			// if serializable file exist
-			logger.WriteInfoLogInFile("Nombre de media " + medias.size() + "");
+			logger.WriteInfoLogInFile("Insertion started " + LocalDateTime.now() + "");
+
+			// to do bulk insert of media
+			// sparqlUtil.executeInsert(null);
 		}
 
 		logger.WriteInfoLogInFile("---------- End Import" + LocalDateTime.now() + "---------- ");
