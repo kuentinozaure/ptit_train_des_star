@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class SerieTv implements Media, Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private String anneeTournage;
 	private String debutTournage;
 	private String finTournage;
@@ -28,6 +28,12 @@ public class SerieTv implements Media, Serializable {
 		this.nomProducteur = nomProducteur;
 		this.coordx = coordx;
 		this.coordy = coordy;
+	}
+
+	public String stringFormat(String str) {
+		return str.replace(" ", "_").replace("'", "_").replace("?", "_").replace(",", "_").replace(".", "_")
+				.replace("(", "_").replace(")", "_").replace("é", "_").replace("è", "_").replace("!", "_")
+				.replace("/", "_").replace("%", "_").replace("°", "_");
 	}
 
 	public String getAnneeTournage() {

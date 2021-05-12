@@ -2,7 +2,7 @@ package entity;
 
 import java.io.Serializable;
 
-public class Film implements Media, Serializable  {
+public class Film implements Media, Serializable {
 
 	private String anneeTournage;
 	private String debutTournage;
@@ -109,6 +109,12 @@ public class Film implements Media, Serializable  {
 
 	public void setNote(String note) {
 		this.note = note;
+	}
+
+	public String stringFormat(String str) {
+		return str.replace(" ", "_").replace("'", "_").replace("?", "_").replace(",", "_").replace(".", "_")
+				.replace("(", "_").replace(")", "_").replace("é", "_").replace("è", "_").replace("!", "_")
+				.replace("/", "_").replace("%", "_").replace("°", "_");
 	}
 
 }
