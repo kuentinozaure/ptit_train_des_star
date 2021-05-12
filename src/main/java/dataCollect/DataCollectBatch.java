@@ -31,7 +31,7 @@ public class DataCollectBatch {
 			logger.WriteInfoLogInFile("Insertion started " + LocalDateTime.now() + "");
 
 			// to do bulk insert of media
-			// sparqlUtil.executeInsert(null);
+			sparqlUtil.executeInsert(null);
 		}
 
 		logger.WriteInfoLogInFile("---------- End Import" + LocalDateTime.now() + "---------- ");

@@ -11,7 +11,7 @@ import entity.Media;
 
 public class SparqlUtil {
 
-	private String SPARQL_URL = "http://localhost:3030/ontologie/update?update";
+	private String SPARQL_URL = "http://localhost:3030/FilmParis/update?update";
 
 	private static SparqlUtil instance;
 
@@ -29,10 +29,13 @@ public class SparqlUtil {
 	public void executeInsert(Media mediaToInsert) throws UnsupportedEncodingException, Exception {
 		LoggerUtil logger = LoggerUtil.getInstance();
 
-		String query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "
-				+ "PREFIX owl: <http://www.w3.org/2002/07/owl#>"
-				+ "PREFIX : <http://www.semanticweb.org/louise/ontologies/2020/4/untitled-ontology-10#>"
-				+ "INSERT DATA { :titi :a_pour_nom \"titi\"." + ":titi :a_pour_numero 1." + "}";
+		String query = "PREFIX :<http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#>"
+				+ "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
+				+ "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>"
+				+ "INSERT DATA {"
+				+ "  :Dora :a_pour_note \"7.5\"^^xsd:double."
+				+ "  :Dora rdfs:label \"Dora\"@fr"
+				+ "}";
 
 		HttpClient client = HttpClient.newHttpClient();
 		HttpRequest request = HttpRequest.newBuilder().uri(URI.create(SPARQL_URL))
