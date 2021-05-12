@@ -45,6 +45,16 @@ public class DataCollectBatch {
 					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i + "  :a_pour_note \""
 							+ film.getNote() + "\" ^^xsd:double. ");
 
+					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i
+							+ "  :a_ete_tournee_a_la_position \"" + film.getCoordy() + ";" + film.getCoordx()
+							+ "\" ^^xsd:string. ");
+
+					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i
+							+ "  :a_ete_tournée_dans_le_lieux \"" + film.getAdresseTournage() + "\" ^^xsd:string. ");
+
+					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i + "  :a_pour_nom \""
+							+ film.getNomTournage() + "\" ^^xsd:string. ");
+
 					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i + "  rdfs:label \""
 							+ film.getNomTournage() + "\"@fr. ");
 
@@ -70,6 +80,17 @@ public class DataCollectBatch {
 							+ " :a_été_tourné_en \"" + webSerie.getAnneeTournage() + "\"^^xsd:string. ");
 
 					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()) + "_" + i
+							+ "  :a_ete_tournee_a_la_position \"" + webSerie.getCoordy() + ";" + webSerie.getCoordx()
+							+ "\" ^^xsd:string. ");
+
+					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()) + "_" + i
+							+ "  :a_ete_tournée_dans_le_lieux \"" + webSerie.getAdresseTournage()
+							+ "\" ^^xsd:string. ");
+
+					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()) + "_" + i
+							+ "  :a_pour_nom \"" + webSerie.getNomTournage() + "\" ^^xsd:string. ");
+
+					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()) + "_" + i
 							+ " rdfs:serieWeb :serieWeb. ");
 
 					query = sparqlUtil.createUpdateQuery(statements);
@@ -87,6 +108,16 @@ public class DataCollectBatch {
 
 					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()) + "_" + i
 							+ " :a_été_tourné_en \"" + serieTV.getAnneeTournage() + "\"^^xsd:string. ");
+
+					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()) + "_" + i
+							+ "  :a_ete_tournee_a_la_position \"" + serieTV.getCoordy() + ";" + serieTV.getCoordx()
+							+ "\" ^^xsd:string. ");
+
+					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()) + "_" + i + "  :a_pour_nom \""
+							+ serieTV.getNomTournage() + "\" ^^xsd:string. ");
+
+					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()) + "_" + i
+							+ "  :a_ete_tournée_dans_le_lieux \"" + serieTV.getAdresseTournage() + "\" ^^xsd:string. ");
 
 					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()) + "_" + i
 							+ " rdfs:serieTV :serieTV. ");

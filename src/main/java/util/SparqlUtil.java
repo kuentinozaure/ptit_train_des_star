@@ -8,6 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class SparqlUtil {
@@ -30,7 +31,6 @@ public class SparqlUtil {
 	public void executeInsert(String query) throws UnsupportedEncodingException, Exception {
 		LoggerUtil logger = LoggerUtil.getInstance();
 
-		System.out.println(query);
 		URL url = new URL(SPARQL_URL + "=" + URLEncoder.encode(query, "UTF-8"));
 		HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
 		urlConnection.setRequestMethod("POST");
@@ -52,7 +52,10 @@ public class SparqlUtil {
 		}
 
 		if (sb.toString().contains("Success")) {
-			System.out.println("insert succesful");
+			logger.WriteInfoLogInFile("QUERY: " + query + " AT " + LocalDateTime.now() + " EXECUTED SUCCESSFULLY ");
+		} else {
+			logger.WriteErrorLogInFile(
+					"QUERY: " + query + " AT " + LocalDateTime.now() + " NOT EXECUTED SUCCESSFULLY ");
 		}
 	}
 
