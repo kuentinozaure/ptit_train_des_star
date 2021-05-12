@@ -49,6 +49,7 @@ public class BatchUtil {
 		logger.WriteInfoLogInFile("Get all film in Paris at " + LocalDateTime.now());
 		List<Media> mediaList = new ArrayList<Media>();
 
+		// && !filmAlreadyNote.contains(nomTournage)
 		List<String> filmAlreadyNote = new ArrayList<String>();
 
 		JSONParser parser = new JSONParser();
@@ -74,7 +75,7 @@ public class BatchUtil {
 			Double coordx = (Double) field.get("coord_x");
 			Double coordy = (Double) field.get("coord_y");
 
-			if (typeTournage.equals("Long métrage") && !filmAlreadyNote.contains(nomTournage)) {
+			if (typeTournage.equals("Long métrage")) {
 
 				filmAlreadyNote.add(nomTournage);
 				mediaList.add(new Film(anneeTournage, debutTournage, finTournage, typeTournage, adresseTournage,

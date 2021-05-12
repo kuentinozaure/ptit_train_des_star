@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#"
+     xml:base="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#a_pour_nom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#a_pour_nom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+        <rdfs:label xml:lang="fr">a_pour_nom</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#a_ete_tournee_a_la_position -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#a_ete_tournee_a_la_position">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#a_ete_tournée_dans_le_lieux -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#a_ete_tournée_dans_le_lieux">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#a_pour_note -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#a_pour_note">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#a_été_tourné_en -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#a_été_tourné_en">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#nom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="fr">nom</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#adressePostal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#adressePostal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="fr">adressePostal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#anneeSortie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#anneeSortie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#note -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#note">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#positionGPS -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#positionGPS">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="fr">positionGPS</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Acteur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Acteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Artiste"/>
+        <rdfs:label xml:lang="fr">acteur ou actrice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Artiste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Artiste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Contributeur"/>
+        <rdfs:label xml:lang="fr">artiste</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Contributeur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Contributeur">
+        <rdfs:label xml:lang="fr">contributeur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Realisateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Realisateur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Contributeur"/>
+        <rdfs:label xml:lang="fr">réalisateur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Scenariste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Scenariste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#Contributeur"/>
+        <rdfs:label xml:lang="fr">scenariste</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#adresseComplete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#adresseComplete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#lieuDeTournage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#codePostal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#codePostal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#lieuDeTournage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#film -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#film">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#lieuDeTournage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#lieuDeTournage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#serieTV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#serieTV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#serieWeb -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#serieWeb">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse#media"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

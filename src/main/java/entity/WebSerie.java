@@ -28,6 +28,12 @@ public class WebSerie implements Media, Serializable {
 		this.coordy = coordy;
 	}
 
+	public String stringFormat(String str) {
+		return str.replace(" ", "_").replace("'", "_").replace("?", "_").replace(",", "_").replace(".", "_")
+				.replace("(", "_").replace(")", "_").replace("é", "_").replace("è", "_").replace("!", "_")
+				.replace("/", "_").replace("%", "_").replace("°", "_");
+	}
+
 	public String getAnneeTournage() {
 		return anneeTournage;
 	}
