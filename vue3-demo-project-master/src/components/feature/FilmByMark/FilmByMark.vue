@@ -1,6 +1,9 @@
 <template>
+  <div>
   <div class="container">
-    <div class="search">Search a city tour</div>
+    <div class="search">Votre city tour</div>
+  </div>
+  <div class="bottom-container">
     <div class="break"></div>
     <div class="field-form">
       <label for="name"> by media</label>
@@ -46,13 +49,14 @@
     <Map :infoPositions="infoPositions"></Map>
     <br />
   </div>
+    </div>
 </template>
 
 <script>
 import Map from "../map/Map.vue";
 
 export default {
-  name: "Home",
+  name: "FilmByMark",
 
   components: {
     Map,
@@ -120,27 +124,11 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #2d333b;
-  border-radius: 6px;
-  border: 1px solid #444c56;
-}
+
 
 .break {
   flex-basis: 100%;
   height: 0;
-}
-
-.search {
-  margin-top: 1%;
-  margin-left: 1%;
-  margin-bottom: 1%;
-  font-size: 1em;
-  font-family: "Roboto", sans-serif;
-  color: #cdd9e5;
-  width: 100%;
 }
 
 .field-form {

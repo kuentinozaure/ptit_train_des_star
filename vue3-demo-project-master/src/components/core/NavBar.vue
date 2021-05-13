@@ -1,14 +1,25 @@
 <template>
-<div>
-  <div class="container">
-    <div class="title"><b>LePtitTrainDesStars</b></div>
-  </div>
+  <div>
+    <div class="container">
+      <div class="title"><b>LePtitTrainDesStars</b></div>
+    </div>
     <div class="bottom-container">
-    <div class="tab">Recherche par notes</div>
-    <div class="tab">Recherche par media</div>
-    <div class="tab">Recherche par années</div>
-    <div class="tab">Recherche par titre de film</div>
-  </div>
+      <div class="tab">Recherche par notes</div>
+      <div class="tab">Recherche par media</div>
+      <div class="tab">Recherche par années</div>
+      <div class="tab">Recherche par titre de film</div>
+    </div>
+
+    <br/>
+
+    <div class="info-panel">
+      <div class="search">Votre city tour</div>
+    </div>
+
+    <div class="info-panel-bottom">
+
+    </div>
+
   </div>
 </template>
 
@@ -21,7 +32,9 @@ export default {
   components: {},
 
   data: () => {
-    return {};
+    return {
+      choosedTab: "",
+    };
   },
 
   mounted() {},
@@ -35,23 +48,21 @@ export default {
 </script>
 
 <style scoped>
-
 .container {
-  display: flex; 
+  display: flex;
   background-color: #2d333b;
-   border-top-left-radius: 6px;
+  border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border: 1px solid #444c56;
 }
 
 .bottom-container {
-  display: flex; 
-   flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
   background-color: #2d333b;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   border: 1px solid #444c56;
-
 }
 
 .title {
@@ -59,7 +70,7 @@ export default {
   margin-bottom: 1%;
   margin-left: 1%;
   font-size: 2em;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #cdd9e5;
 }
 
@@ -68,14 +79,41 @@ export default {
   margin-bottom: 0.5%;
   margin-left: 1%;
   font-size: 1rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #cdd9e5;
   width: 23%;
   text-align: center;
 }
 
 .tab:hover {
- cursor: pointer;
+  cursor: pointer;
 }
 
+.info-panel {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2d333b;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border: 1px solid #444c56;
+}
+
+.info-panel-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #22272e;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border: 1px solid #444c56;
+}
+
+.search {
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  color: #cdd9e5;
+  width: 100%;
+}
 </style>

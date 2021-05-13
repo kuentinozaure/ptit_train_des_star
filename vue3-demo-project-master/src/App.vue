@@ -2,18 +2,18 @@
   <div class="body">
     <nav-bar></nav-bar>
     <br/>
-    <home></home>
+    <film-by-mark></film-by-mark>
   </div>
 </template>
 
 <script>
 import NavBar from "./components/core/NavBar.vue";
-import Home from "./components/feature/home/Home.vue";
+import FilmByMark from "./components/feature/FilmByMark/FilmByMark.vue";
 
 export default {
   components: {
     NavBar,
-    Home,
+    FilmByMark,
   },
   setup() {
     return {};
