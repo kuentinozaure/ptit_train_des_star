@@ -2,18 +2,16 @@
   <div class="body">
     <nav-bar></nav-bar>
     <br/>
-    <film-by-mark></film-by-mark>
+   <router-view />
   </div>
 </template>
 
 <script>
 import NavBar from "./components/core/NavBar.vue";
-import FilmByMark from "./components/feature/FilmByMark/FilmByMark.vue";
 
 export default {
   components: {
     NavBar,
-    FilmByMark,
   },
   setup() {
     return {};

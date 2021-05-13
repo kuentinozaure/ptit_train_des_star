@@ -1,55 +1,15 @@
 <template>
   <div>
-  <div class="container">
-    <div class="search">Votre city tour</div>
-  </div>
-  <div class="bottom-container">
-    <div class="break"></div>
-    <div class="field-form">
-      <label for="name"> by media</label>
-      <div class="break"></div>
-      <select name="name" id="media-select">
-        <option value="film">Film</option>
-        <option value="webSeries">Web series</option>
-        <option value="TvMovie">TV movie</option>
-      </select>
-
-      <div class="break"></div>
-
-      <label for="name"> by media</label>
-      <div class="break"></div>
-      <select name="name" id="year-select">
-        <option value="2016">2016</option>
-        <option value="2017">2017</option>
-        <option value="2018">2018</option>
-        <option value="2019">2019</option>
-        <option value="2020">2020</option>
-      </select>
-
-      <div class="break"></div>
-
-      <label for="name">By title</label>
-
-      <input
-        class="field"
-        name="name"
-        type="text"
-        minlength="4"
-        maxlength="8"
-        size="10"
-      />
-
-      <button v-on:click="onClickSearch('Taxi 5')">Search</button>
-      <div class="break"></div>
+    <div class="container">
+      <div class="search">Votre city tour par note</div>
     </div>
-    <div class="break"></div>
-    <br />
-
-    <!-- :pathBetweenPositions="pathBetweenPositions" -->
-    <Map :infoPositions="infoPositions"></Map>
-    <br />
-  </div>
+    <div class="bottom-container">
+      <div class="break"></div>
+      <!-- :pathBetweenPositions="pathBetweenPositions" -->
+      <Map :infoPositions="infoPositions"></Map>
+      <br />
     </div>
+  </div>
 </template>
 
 <script>
@@ -108,15 +68,15 @@ export default {
       this.axios
         .post(`http://localhost:3030/film/query?query=${encodedQuery}`)
         .then((response) => {
-            response.data.results.bindings.map(elem => {
-                console.log(elem)
-                 this.infoPositions.push({
-            filmName: elem.nomFilm.value,
-            lieux: elem.lieux.value,
-            long: elem.position.value.split(";")[0],
-            lat: elem.position.value.split(";")[1],
+          response.data.results.bindings.map((elem) => {
+            console.log(elem);
+            this.infoPositions.push({
+              filmName: elem.nomFilm.value,
+              lieux: elem.lieux.value,
+              long: elem.position.value.split(";")[0],
+              lat: elem.position.value.split(";")[1],
+            });
           });
-            })
         });
     },
   },
@@ -124,8 +84,6 @@ export default {
 </script>
 
 <style scoped>
-
-
 .break {
   flex-basis: 100%;
   height: 0;

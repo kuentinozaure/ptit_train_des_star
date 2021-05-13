@@ -4,22 +4,12 @@
       <div class="title"><b>LePtitTrainDesStars</b></div>
     </div>
     <div class="bottom-container">
-      <div class="tab">Recherche par notes</div>
-      <div class="tab">Recherche par media</div>
-      <div class="tab">Recherche par années</div>
-      <div class="tab">Recherche par titre de film</div>
+      <router-link to="/" class="tab">Recherche par notes</router-link>
+      <router-link to="/media" class="tab">Recherche par media</router-link>
+      <router-link to="/year" class="tab">Recherche par années</router-link>
+      <router-link to="/title" class="tab">Recherche par titre de film</router-link>
     </div>
-
     <br/>
-
-    <div class="info-panel">
-      <div class="search">Votre city tour</div>
-    </div>
-
-    <div class="info-panel-bottom">
-
-    </div>
-
   </div>
 </template>
 
@@ -89,31 +79,4 @@ export default {
   cursor: pointer;
 }
 
-.info-panel {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #2d333b;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  border: 1px solid #444c56;
-}
-
-.info-panel-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #22272e;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  border: 1px solid #444c56;
-}
-
-.search {
-  margin-top: 1%;
-  margin-left: 1%;
-  margin-bottom: 1%;
-  font-size: 1em;
-  font-family: "Roboto", sans-serif;
-  color: #cdd9e5;
-  width: 100%;
-}
 </style>
