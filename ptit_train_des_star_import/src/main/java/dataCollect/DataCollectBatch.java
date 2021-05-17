@@ -42,26 +42,27 @@ public class DataCollectBatch {
 
 					ArrayList<String> statements = new ArrayList<String>();
 
-					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i + "  :a_pour_note \""
-							+ film.getNote() + "\" ^^xsd:double. ");
+					statements.add(" :" + film.stringFormat(film.getNomTournage()).replace("°", "_") + "_" + i
+							+ "  :a_pour_note \"" + film.getNote() + "\" ^^xsd:double. ");
 
-					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i
+					statements.add(" :" + film.stringFormat(film.getNomTournage()).replace("°", "_") + "_" + i
 							+ "  :a_ete_tournee_a_la_position \"" + film.getCoordy() + ";" + film.getCoordx()
 							+ "\" ^^xsd:string. ");
 
-					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i
+					statements.add(" :" + film.stringFormat(film.getNomTournage()).replace("°", "_") + "_" + i
 							+ "  :a_ete_tournee_dans_le_lieux \"" + film.getAdresseTournage() + "\" ^^xsd:string. ");
 
-					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i + "  :a_pour_nom \""
-							+ film.getNomTournage() + "\" ^^xsd:string. ");
+					statements.add(" :" + film.stringFormat(film.getNomTournage()).replace("°", "_") + "_" + i
+							+ "  :a_pour_nom \"" + film.getNomTournage() + "\" ^^xsd:string. ");
 
-					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i + "  rdfs:label \""
-							+ film.getNomTournage() + "\"@fr. ");
+					statements.add(" :" + film.stringFormat(film.getNomTournage()).replace("°", "_") + "_" + i
+							+ "  rdfs:label \"" + film.getNomTournage() + "\"@fr. ");
 
-					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i + " :a_ete_tourne_en \""
-							+ film.getAnneeTournage() + "\"^^xsd:string. ");
+					statements.add(" :" + film.stringFormat(film.getNomTournage()).replace("°", "_") + "_" + i
+							+ " :a_ete_tourne_en \"" + film.getAnneeTournage() + "\"^^xsd:string. ");
 
-					statements.add(" :" + film.stringFormat(film.getNomTournage()) + "_" + i + " rdfs:film :film. ");
+					statements.add(" :" + film.stringFormat(film.getNomTournage()).replace("°", "_") + "_" + i
+							+ " rdfs:film :film. ");
 
 					query = sparqlUtil.createUpdateQuery(statements);
 
@@ -73,24 +74,24 @@ public class DataCollectBatch {
 
 					ArrayList<String> statements = new ArrayList<String>();
 
-					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()) + "_" + i + "  rdfs:label \""
-							+ webSerie.getNomTournage() + "\"@fr. ");
+					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()).replace("°", "_") + "_" + i
+							+ "  rdfs:label \"" + webSerie.getNomTournage() + "\"@fr. ");
 
-					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()) + "_" + i
+					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()).replace("°", "_") + "_" + i
 							+ " :a_ete_tourne_en \"" + webSerie.getAnneeTournage() + "\"^^xsd:string. ");
 
-					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()) + "_" + i
+					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()).replace("°", "_") + "_" + i
 							+ "  :a_ete_tournee_a_la_position \"" + webSerie.getCoordy() + ";" + webSerie.getCoordx()
 							+ "\" ^^xsd:string. ");
 
-					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()) + "_" + i
+					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()).replace("°", "_") + "_" + i
 							+ "  :a_ete_tournee_dans_le_lieux \"" + webSerie.getAdresseTournage()
 							+ "\" ^^xsd:string. ");
 
-					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()) + "_" + i
+					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()).replace("°", "_") + "_" + i
 							+ "  :a_pour_nom \"" + webSerie.getNomTournage() + "\" ^^xsd:string. ");
 
-					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()) + "_" + i
+					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()).replace("°", "_") + "_" + i
 							+ " rdfs:serieWeb :serieWeb. ");
 
 					query = sparqlUtil.createUpdateQuery(statements);
@@ -103,23 +104,23 @@ public class DataCollectBatch {
 					SerieTv serieTV = (SerieTv) media;
 					ArrayList<String> statements = new ArrayList<String>();
 
-					statements.add(":" + serieTV.stringFormat(serieTV.getNomTournage()) + "_" + i + " rdfs:label \""
-							+ serieTV.getNomTournage() + "\"@fr.");
+					statements.add(":" + serieTV.stringFormat(serieTV.getNomTournage()).replace("°", "_") + "_" + i
+							+ " rdfs:label \"" + serieTV.getNomTournage() + "\"@fr.");
 
-					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()) + "_" + i
+					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()).replace("°", "_") + "_" + i
 							+ " :a_ete_tourne_en \"" + serieTV.getAnneeTournage() + "\"^^xsd:string. ");
 
-					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()) + "_" + i
+					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()).replace("°", "_") + "_" + i
 							+ "  :a_ete_tournee_a_la_position \"" + serieTV.getCoordy() + ";" + serieTV.getCoordx()
 							+ "\" ^^xsd:string. ");
 
-					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()) + "_" + i + "  :a_pour_nom \""
-							+ serieTV.getNomTournage() + "\" ^^xsd:string. ");
+					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()).replace("°", "_") + "_" + i
+							+ "  :a_pour_nom \"" + serieTV.getNomTournage() + "\" ^^xsd:string. ");
 
-					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()) + "_" + i
+					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()).replace("°", "_") + "_" + i
 							+ "  :a_ete_tournee_dans_le_lieux \"" + serieTV.getAdresseTournage() + "\" ^^xsd:string. ");
 
-					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()) + "_" + i
+					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()).replace("°", "_") + "_" + i
 							+ " rdfs:serieTV :serieTV. ");
 
 					query = sparqlUtil.createUpdateQuery(statements);
