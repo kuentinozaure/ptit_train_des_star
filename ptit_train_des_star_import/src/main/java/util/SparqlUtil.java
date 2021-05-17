@@ -61,7 +61,7 @@ public class SparqlUtil {
 
 	public String createUpdateQuery(ArrayList<String> statements) {
 
-		String query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX : <http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse> INSERT DATA { ";
+		String query = "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX : <http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse> PREFIX dbpedia: <http://dbpedia.org/property/> INSERT DATA { ";
 
 		for (String statement : statements) {
 			query += statement;

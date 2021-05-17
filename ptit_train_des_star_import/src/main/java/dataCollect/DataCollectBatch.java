@@ -64,6 +64,9 @@ public class DataCollectBatch {
 					statements.add(" :" + film.stringFormat(film.getNomTournage()).replace("°", "_") + "_" + i
 							+ " rdfs:film :film. ");
 
+					statements.add(" :" + film.stringFormat(film.getNomTournage()).replace("°", "_") + "_" + i
+							+ " dbpedia:isClassifiedBy :film. ");
+
 					query = sparqlUtil.createUpdateQuery(statements);
 
 					sparqlUtil.executeInsert(query);
@@ -94,6 +97,9 @@ public class DataCollectBatch {
 					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()).replace("°", "_") + "_" + i
 							+ " rdfs:serieWeb :serieWeb. ");
 
+					statements.add(" :" + webSerie.stringFormat(webSerie.getNomTournage()).replace("°", "_") + "_" + i
+							+ " dbpedia:isClassifiedBy :serieWeb. ");
+
 					query = sparqlUtil.createUpdateQuery(statements);
 
 					sparqlUtil.executeInsert(query);
@@ -123,11 +129,15 @@ public class DataCollectBatch {
 					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()).replace("°", "_") + "_" + i
 							+ " rdfs:serieTV :serieTV. ");
 
+					statements.add(" :" + serieTV.stringFormat(serieTV.getNomTournage()).replace("°", "_") + "_" + i
+							+ " dbpedia:isClassifiedBy :serieTV. ");
+
 					query = sparqlUtil.createUpdateQuery(statements);
 
 					sparqlUtil.executeInsert(query);
 					i++;
 				}
+
 			}
 
 		}

@@ -51,7 +51,7 @@ export default {
     LMarker,
     LControlLayers,
     LPopup,
-    // LPolyline,
+   // LPolyline,
   },
 
   props: {
@@ -65,6 +65,7 @@ export default {
   },
 
   mounted() {
+    console.log(this.infoPositions)
   },
 
   setup() {

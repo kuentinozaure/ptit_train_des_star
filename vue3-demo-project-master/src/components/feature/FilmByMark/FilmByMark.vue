@@ -5,7 +5,7 @@
     </div>
     <div class="bottom-container">
       <div class="break"></div>
-      <!-- :pathBetweenPositions="pathBetweenPositions" -->
+      <!--  :pathBetweenPositions="pathBetweenPositions" -->
       <Map :infoPositions="infoPositions"></Map>
       <br />
     </div>
@@ -33,7 +33,7 @@ export default {
 
   mounted() {
     const encodedQuery = encodeURIComponent(
-      "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX : <http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> SELECT  * WHERE { ?film rdfs:film ?y. ?film :a_pour_nom ?nom. ?film :a_pour_note ?note. ?film :a_ete_tournee_a_la_position ?position. ?film :a_ete_tournee_dans_le_lieux ?lieux. FILTER ( ?note > 5 ). } LIMIT 100"
+      "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX : <http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> SELECT  * WHERE { ?film rdfs:film ?y. ?film :a_pour_nom ?nom. ?film :a_pour_note ?note. ?film :a_ete_tournee_a_la_position ?position. ?film :a_ete_tournee_dans_le_lieux ?lieux. FILTER ( ?note > 5 ). } LIMIT 50"
     );
     this.axios
       .post(`http://localhost:3030/film/query?query=${encodedQuery}`)

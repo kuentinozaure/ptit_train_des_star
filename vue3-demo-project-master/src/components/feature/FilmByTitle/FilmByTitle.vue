@@ -87,6 +87,11 @@ export default {
               long: elem.position.value.split(";")[0],
               lat: elem.position.value.split(";")[1],
             });
+
+             this.pathBetweenPositions.push([
+            elem.position.value.split(";")[0],
+            elem.position.value.split(";")[1],
+          ]);
           });
         });
     },

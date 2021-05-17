@@ -73,12 +73,13 @@ export default {
     },
 
     executeSparqlQueryMedia(mediaChoosed) {
-      this.infoPositions = [];
+       this.infoPositions = [];
       const encodedQuery = encodeURIComponent(`PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
          PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
          PREFIX :<http://www.semanticweb.org/cassia/ontologies/2016/FilmsToulouse> 
+         PREFIX dbpedia: <http://dbpedia.org/property/>
          SELECT * WHERE { 
-            ?media rdfs:${mediaChoosed} ?Media. 
+            ?media dbpedia:isClassifiedBy :${mediaChoosed}. 
             ?media :a_ete_tournee_dans_le_lieux ?lieux. 
             ?media :a_ete_tournee_a_la_position ?position. 
             ?media :a_pour_nom ?nom.    
@@ -87,6 +88,7 @@ export default {
       this.axios
         .post(`http://localhost:3030/film/query?query=${encodedQuery}`)
         .then((response) => {
+          console.log(response.data.results.bindings)
           response.data.results.bindings.map((elem) => {
             this.infoPositions.push({
               filmName: elem.nom.value,
