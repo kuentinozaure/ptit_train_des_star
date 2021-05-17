@@ -21,9 +21,9 @@
 ## Fonctionnalités de notre application
 
 - Creer un city tour en fonction des films les mieux notés ✔
-- Creer un city tour en fonction des genre des medias voulue ( film, serie Tv, web serie)
-- Creer un city tour en fonction de l'année choisis
-- Choisir son city tour en fonction de son titre de media prefere (nom film, serie Tv, web serie)
+- Creer un city tour en fonction des genre des medias voulue ( film, serie Tv, web serie) ✔
+- Creer un city tour en fonction de l'année choisis ✔
+- Choisir son city tour en fonction de son titre de media prefere (nom film, serie Tv, web serie) ✔
 
 ## Utilisation de l'application
 
