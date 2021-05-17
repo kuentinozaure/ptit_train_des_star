@@ -13,8 +13,8 @@
           name="name"
           type="text"
           minlength="4"
-          maxlength="8"
-          size="10"
+          maxlength="100"
+          size="100"
           v-model="typedFilm"
         />
 
@@ -72,8 +72,8 @@ export default {
          SELECT * WHERE { 
             ?media :a_ete_tournee_dans_le_lieux ?lieux. 
             ?media :a_ete_tournee_a_la_position ?position.  
-            ?media :a_pour_nom ?nom.        
-            FILTER(?nom = "${typedFilm}") 
+            ?media :a_pour_nom ?nom.    
+            FILTER regex(?nom, "${typedFilm}", "i"). 
          } LIMIT 50`);
 
       this.axios
