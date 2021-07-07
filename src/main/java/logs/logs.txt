@@ -1,0 +1,10 @@
+mai 12, 2021 10:37:36 AM util.LoggerUtil WriteInfoLogInFile
+INFOS: ---------- Start deserialization 2021-05-12T10:37:36.442833---------- 
+mai 12, 2021 10:37:36 AM util.LoggerUtil WriteInfoLogInFile
+INFOS: ---------- End deserialization 2021-05-12T10:37:36.718742---------- 
+mai 12, 2021 10:37:36 AM util.LoggerUtil WriteInfoLogInFile
+INFOS: ---------- Start Import2021-05-12T10:37:36.719948---------- 
+mai 12, 2021 10:37:36 AM util.LoggerUtil WriteInfoLogInFile
+INFOS: Insertion started 2021-05-12T10:37:36.721317
+mai 12, 2021 10:37:37 AM util.LoggerUtil WriteInfoLogInFile
+INFOS: ---------- End Import2021-05-12T10:37:37.130303---------- 
